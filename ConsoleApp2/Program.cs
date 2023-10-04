@@ -1,31 +1,11 @@
-﻿namespace ConsoleApp2
+﻿using System;
+
+class mainClass
 {
-    internal class Program
+    public static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            string MyName = "My name is Jane";
-            byte Myage = 27;
-            bool HaveIApet = true;
-            double MySchoeSize = 37.5;
-
-            Console.WriteLine(MyName);
-            Console.WriteLine("My age is " + Myage);
-            Console.WriteLine("Do I have a pet? " + HaveIApet);
-            Console.WriteLine("My shoe size is " + MySchoeSize);
-
-            
-
-            
-
-           
-
-            
-
-            
-
-            
-        }
+        Console.WriteLine("IntMin {0} ", int.MinValue);
+        Console.WriteLine("intMin {0} ", int.MaxValue);
 
     }
 }
