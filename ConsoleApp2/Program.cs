@@ -1,11 +1,22 @@
 ﻿using System;
 
-class mainClass
+class MainClass
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("IntMin {0} ", int.MinValue);
-        Console.WriteLine("intMin {0} ", int.MaxValue);
+        ConsoleColor Semaphore;
 
+        Semaphore = ConsoleColor.Green;
+
+        Console.WriteLine(Semaphore);
     }
 }
+
+enum Semaphore
+{
+    Red = 100,
+    Yellow = 200,
+    Green = 300
+
+}
+
