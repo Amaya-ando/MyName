@@ -1,58 +1,51 @@
-﻿using System;
-
-class MainClass
+﻿class MainClass
 {
-    public static void Main(string[] args) {
-        Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+    static void Main(string[] args)
+    {
+        var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
 
-        var color = Console.ReadLine();
+        int temp;
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+            for (int j = i + 1; j < arr.Length; j++)
+            {
+                if (arr[i] > arr[j])
+                {
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }   
+            }
+        }
+
+        foreach (var item in arr)
+        {
+            Console.Write(item);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    }   }       
+
+
+
+
+
+
+
+
+
+            
+
         
-        if (color == "red")
-        {
-            Console.BackgroundColor = ConsoleColor.Red;
-            Console.ForegroundColor = ConsoleColor.Black;
-
-            Console.WriteLine("Your color is red!");
-        }
-     
-       else if (color == "green")
-        {
-            Console.BackgroundColor = ConsoleColor.Green;
-            Console.ForegroundColor = ConsoleColor.Black;
-
-            Console.WriteLine("Your color is green!");
-        }
-       
-
-        else
-        {
-            Console.BackgroundColor = ConsoleColor.Cyan;
-            Console.ForegroundColor = ConsoleColor.Black;
-            Console.WriteLine("Your cplpr is cyan!");
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-}
-
+        
