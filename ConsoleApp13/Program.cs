@@ -8,18 +8,20 @@ namespace ConsoleApp13
         static void Main(string[] args)
         {
 
-            int[][] array = new int[3][];
-            array[0] = new int[2] { 1, 2 };
-            array[1] = new int[3] { 1, 2, 3 };
-            array[2] = new int[5] { 1, 2, 3, 4, 5 };
+            (string Name, string[] Dishes) User;
 
-            foreach (var num in array)
+            Console.WriteLine("Как вас зовут? ");
+            User.Name = Console.ReadLine();
+
+            User.Dishes = new string[5];
+
+            for (int i = 0; i < User.Dishes.Length; i++)
             {
-                foreach (var item in num)
-                {
-                    Console.Write(item + " ");
-                }
+                Console.WriteLine("Введите любимое блюдо номер {0}", i + 1);
+                User.Dishes[i] = Console.ReadLine();
             }
+
+            Console.ReadKey();
 
 
 

@@ -2,40 +2,48 @@
 {
     static void Main(string[] args)
     {
-        var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+        (string Name, string LastName, string Login, int LoginLength, bool HasPet, string[] favcolors, double Age) User;
 
-        int temp;
-
-        for (int i = 0; i < arr.Length; i++)
+        for (; ;)
         {
-            for (int j = i + 1; j < arr.Length; j++)
+
+            Console.Write("Введите ваше имя:\n");
+            User.Name = Console.ReadLine();
+
+            Console.Write("Введите вашу фамилию:\n");
+            User.LastName = Console.ReadLine();
+
+            Console.Write("Введите ваш логин:\n");
+            User.Login = Console.ReadLine();
+            User.LoginLength = User.Login.Length;
+
+            Console.Write("Есть ли у вас животные? Да или Нет\n");
+            var result = Console.ReadLine();
+
+            if (result == "Да")
             {
-                if (arr[i] > arr[j])
-                {
-                    temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }   
+                User.HasPet = true;
             }
+            
+            else
+            {
+                User.HasPet = false;
+            }
+
+            Console.Write("Введите ваш возраст\n");
+            User.Age = double.Parse(Console.ReadLine());
+
+            User.favcolors = new string[3];
+            Console.Write("Введите три своих любимых цвета");
+            
+            for (int i = 0; i < User.favcolors.Length; i++)
+            {
+                User.favcolors[i] = Console.ReadLine();
+            }
+           
+
         }
-
-        foreach (var item in arr)
-        {
-            Console.Write(item);
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-    }   }       
+    }        }             
 
 
 

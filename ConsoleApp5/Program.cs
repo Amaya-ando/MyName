@@ -4,15 +4,25 @@
     {
         static void Main(string[] args)
         {
-            (string name, int age) anketa;
 
-            Console.Write("Ваше имя: ");
-            anketa.name = Console.ReadLine();
-            Console.Write("Ваш возраст: ");
-            anketa.age = Convert.ToInt32(Console.ReadLine());   
+            (string Name, string Type, double Age, int NameCount) Pet;
 
-            Console.WriteLine("Ваше имя: {0}", anketa.name);
-            Console.WriteLine("Вас зовут: {0}", anketa.age);
+            Console.Write("Введите, пожалуйста, имя питомца: ");
+            Pet.Name = Console.ReadLine();
+            Pet.NameCount = Pet.Name.Length;
+
+            Console.Write("Укажите тип вашего питомца: ");
+            Pet.Type = Console.ReadLine();
+
+            Console.Write("Теперь, укажите его возраст: ");
+            Pet.Age = Convert.ToInt32(Console.ReadLine());
+            
+
+            Console.WriteLine("Спасибо!");
+            Console.WriteLine("Имя вашего питомца: {0}", Pet.Name);
+            Console.WriteLine("Тип вашего питомца: {0}", Pet.Type);
+            Console.WriteLine("Возраст вашего питомца: {0}", Pet.Age);
+            Console.WriteLine("Длина имени вашего питомца {0}", Pet.NameCount);
 
             Console.ReadKey();
             
