@@ -1,46 +1,69 @@
-﻿namespace ConsoleApp5
+﻿using System;
+using System.Drawing;
+// которая в цикле вызывает метод ShowColor()
+// записывает его значение в массив из трех цветов favcolors, а потом отображает значения этого массива. 
+class MainClass
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        var favcolors = new string[3];
+
+        for (int i = 0; i < favcolors.Length; i++)
         {
-
-            (string Name, string Type, double Age, int NameCount) Pet;
-
-            Console.Write("Введите, пожалуйста, имя питомца: ");
-            Pet.Name = Console.ReadLine();
-            Pet.NameCount = Pet.Name.Length;
-
-            Console.Write("Укажите тип вашего питомца: ");
-            Pet.Type = Console.ReadLine();
-
-            Console.Write("Теперь, укажите его возраст: ");
-            Pet.Age = Convert.ToInt32(Console.ReadLine());
-            
-
-            Console.WriteLine("Спасибо!");
-            Console.WriteLine("Имя вашего питомца: {0}", Pet.Name);
-            Console.WriteLine("Тип вашего питомца: {0}", Pet.Type);
-            Console.WriteLine("Возраст вашего питомца: {0}", Pet.Age);
-            Console.WriteLine("Длина имени вашего питомца {0}", Pet.NameCount);
-
-            Console.ReadKey();
-            
-        }
-
-          
-
-
-
-
-
-
-
-
+            favcolors[i] = ShowColor();
 
         }
-        
-        
 
-       
+        Console.WriteLine("Ваши любимые цвета:");
+        foreach (var color in favcolors)
+        {
+            Console.WriteLine(color);
+        }
+
+
+        Console.ReadKey();
     }
+    static string ShowColor()
+    {
+        string color = Console.ReadLine();
+
+        return color;
+
+    }
+
+
+
+
+
+
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

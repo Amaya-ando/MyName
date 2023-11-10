@@ -1,51 +1,49 @@
 ﻿class MainClass
-{
+{ // 1. Создать метод без возвращаемого значения.
+  // 2. В параметрах метода - принимать массив int
+  // 3. Внутри метода должна происходить сортировка и вывод.
+    
+
     static void Main(string[] args)
     {
-        (string Name, string LastName, string Login, int LoginLength, bool HasPet, string[] favcolors, double Age) User;
+        int[] lessi = GetArrayFromConsole();
+        ArrayOrk(lessi);
+    }
 
-        for (; ;)
+    static int[] GetArrayFromConsole()
+    {
+        var result = new int[5];
+
+        for (int i = 0; i < result.Length; i++)
         {
-
-            Console.Write("Введите ваше имя:\n");
-            User.Name = Console.ReadLine();
-
-            Console.Write("Введите вашу фамилию:\n");
-            User.LastName = Console.ReadLine();
-
-            Console.Write("Введите ваш логин:\n");
-            User.Login = Console.ReadLine();
-            User.LoginLength = User.Login.Length;
-
-            Console.Write("Есть ли у вас животные? Да или Нет\n");
-            var result = Console.ReadLine();
-
-            if (result == "Да")
-            {
-                User.HasPet = true;
-            }
-            
-            else
-            {
-                User.HasPet = false;
-            }
-
-            Console.Write("Введите ваш возраст\n");
-            User.Age = double.Parse(Console.ReadLine());
-
-            User.favcolors = new string[3];
-            Console.Write("Введите три своих любимых цвета");
-            
-            for (int i = 0; i < User.favcolors.Length; i++)
-            {
-                User.favcolors[i] = Console.ReadLine();
-            }
-           
+            Console.WriteLine("Введите элемент массива номер {0}", i + 1);
+            result[i] = int.Parse(Console.ReadLine());
 
         }
-    }        }             
+        return result;
+    
+    }
+
+    static void ArrayOrk(int[] Array)
+    {
+        int temp;
+
+        for (int i = 0; i < Array.Length; i++)
+        {
+            for (int j = 0; j < Array.Length; j++)
+            {
+
+            }
+        }
+    }
 
 
+
+
+
+}
+
+    
 
 
 
