@@ -30,11 +30,24 @@
 
         for (int i = 0; i < Array.Length; i++)
         {
-            for (int j = 0; j < Array.Length; j++)
+            for (int j = i + 1; j < Array.Length; j++)
             {
-
+                if (Array[i] > Array[j])
+                {
+                    temp = Array[i];
+                    Array[i] = Array[j];
+                    Array[j] = temp;
+                }
             }
         }
+
+        foreach (var item in Array)
+        {
+            Console.Write(item);
+        }
+   
+    
+    
     }
 
 
